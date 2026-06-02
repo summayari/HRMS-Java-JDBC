@@ -231,6 +231,57 @@ java -cp "out:lib/*" hrms.Main
 - **HRMS_Database_v5.sql** — Expenses table, TeamAssignments, updated role CHECK constraints, sample expenses
 
 ---
+How to Run This Project
+What you need installed
+
+Java JDK 11 or later → https://adoptium.net
+SQL Server 2019+ or SQL Server Express (free) → https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+SSMS (SQL Server Management Studio) → https://aka.ms/ssmsfullsetup
+
+
+Step 1 — Download the project
+Click the green "Code" button on the repo → "Download ZIP" → extract it
+
+Step 2 — Download the JDBC Driver
+
+Go to → https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server
+Download mssql-jdbc-13.4.0.jre11.jar
+Create a folder called lib inside the project folder
+Place the .jar file inside lib/
+
+
+Step 3 — Set up the Database
+Open SSMS, connect to your SQL Server, then run these 3 scripts in order:
+1. HRMS_Database_v2.sql
+2. HRMS_Database_v4.sql
+3. HRMS_Database_v5.sql
+Each file is in the root of the project folder.
+
+Step 4 — Run the project
+Windows — double click run.bat
+OR open Command Prompt in the project folder and run:
+run.bat
+
+Step 5 — Connect to your database
+When the app opens a Connection Dialog appears:
+FieldWhat to enterServerlocalhost\SQLEXPRESSDatabaseHRMS_DBUsernamesaPasswordyour SQL Server password
+Click Connect → Login screen appears.
+
+Step 6 — Login
+UsernamePasswordRoleadminadmin123Admindirectordir123Directorhrmanagerhr123HR Managerteamleadtl123Team Leadaccountantac123Accountantemployee1emp123Employee
+
+Common Problems
+"Cannot connect to SQL Server"
+
+Make sure SQL Server service is running → open Services (Win+R → type services.msc) → find SQL Server (SQLEXPRESS) → Start it
+
+"JDBC Driver not found"
+
+Make sure mssql-jdbc-13.4.0.jre11.jar is inside the lib/ folder
+
+"java is not recognized"
+
+JDK is not installed or not added to PATH → reinstall from https://adoptium.net and check "Add to PATH" during install
 
 ## Marking Scheme Coverage
 
