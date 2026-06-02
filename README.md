@@ -7,13 +7,13 @@
 
 ## Screenshots
 
-> _Add screenshots here after running the app — login screen, each dashboard, and a salary slip._  
-> **Tip:** Press `Win + Shift + S` to screenshot, save to `docs/screenshots/`, then embed below:
+![Login](login.png)
+![Admin Dashboard](admin.png)
+![Hr Dashboard](HR.png)
+![Salary Panel](payslip.png)
+![Employee Panel](emp.png)
+![Director Panel](Director.png)
 
-```md
-![Login](docs/screenshots/login.png)
-![Admin Dashboard](docs/screenshots/admin-dashboard.png)
-```
 
 ---
 
